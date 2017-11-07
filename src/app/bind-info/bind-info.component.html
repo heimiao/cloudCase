@@ -1,0 +1,70 @@
+<div class="navTitle">
+    <div class="left">&nbsp;&nbsp;
+        <span class="fa fa-chevron-left" aria-hidden="true"></span>
+    </div>
+    <div class="left">绑定信息</div>
+    <div class="opc">提交</div>
+</div>
+<div class="login_form">
+    <form class="form-horizontal" novalidate>
+        <p class="title">请确认是您本人，验证完后不可修改</p>
+        <div class="form-group">
+            <div class="input-group icon_input">
+                <input type="number" class="form-control" id="userMobile" placeholder="真实姓名" required formControlName="userMobile">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group icon_input">
+                <input type="number" class="form-control" placeholder="请输入您的身份证号" required formControlName="userMobile">
+            </div>
+        </div>
+        <div class="form-group radio-group">
+            <label for="ybkh" class="input-group input-radio"> 
+                <input type="radio" class="selfCk" id="ybkh" formControlName="agreement" name="numberType" checked> 
+                  医保卡号
+            </label>
+            <label for="mzh" class="input-group input-radio"> 
+                <input type="radio" class="selfCk" id="mzh" formControlName="agreement"  name="numberType"> 
+                 门诊号
+            </label>
+            <label for="zyh" class="input-group input-radio"> 
+                <input type="radio" class="selfCk" id="zyh" formControlName="agreement"  name="numberType"> 
+                 住院号
+            </label>
+        </div>
+        <div class="form-group">
+            <div class="input-group icon_input">
+                <input type="number" class="form-control" placeholder="请输入您的号" required formControlName="userMobile">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group icon_input">
+                <img src="./assets/img/example.png" alt="">
+            </div>
+        </div>
+        <!-- <button style=" margin-top:3rem; " type="submit " class="btn btn-default btn_info ">注册</button> -->
+        <template #template tabindex="-1 " role="dialog " aria-labelledby="mySmallModalLabel " aria-hidden="true "> 
+            <div class="modal-body code_pic "><!--  formGroupName="picCode " -->
+                <h3>请输入图片验证码</h3>
+                <dl>
+                    <dt><img alt=" " [src]="system.imgUrl "(click)="refreshCode() "></dt>
+                    <dd>
+                       <!--  <input type="text " maxlength="1 " formControlName="code1 "  tabindex="1 ">
+                        <input type="text " maxlength="1 " formControlName="code2 " tabindex="2 ">
+                        <input type="text " maxlength="1 " formControlName="code3 " tabindex="3 ">
+                        <input type="text " maxlength="1 " formControlName="code4 " tabindex="4 "> -->
+                         <input type="text "  formControlName="picCode " maxlength="4 ">
+                         <!--<ul>
+                             <li></li>
+                             <li></li>
+                             <li></li>
+                             <li></li>
+                         </ul> -->
+                    </dd>
+                </dl>
+            </div>
+          </template>
+    </form>
+
+    <div class="statement">信息仅用于身份验证，医疗云保障您的信息安全</div>
+</div>

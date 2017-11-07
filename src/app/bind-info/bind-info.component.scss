@@ -1,0 +1,160 @@
+@import "../../sass/mixins";
+@import "../../sass/mixins/button";
+.login_form {
+    background: #fff;
+    height: 100%;
+    position: relative;
+    padding: 4rem 2rem 0rem 2rem;
+    .title {
+        font-size: 1.6rem;
+        color: #000;
+        text-align: center;
+        padding-bottom: .5rem;
+        color: rgb(153, 153, 153)
+    }
+    form {
+        position: relative;
+        .help-block {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 5;
+        }
+        .radio-group {
+            display: flex;
+            .input-radio {
+                color: rgb(68, 68, 68);
+                font-size: 1.6rem;
+                display: inline-block;
+                vertical-align: middle;
+                flex: 1;
+                &:first-child~.input-radio {
+                    text-align: center;
+                }
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        .selfCk {
+            vertical-align: middle;
+            display: inline-block;
+            background-color: transparent;
+            -webkit-appearance: none;
+            border: 0px;
+            width: 1.4rem;
+            height: 1.4rem;
+            outline: 0!important;
+            margin-right: .4rem;
+            &:before {
+                display: inline-block;
+                position: absolute;
+                width: 1.4rem;
+                height: 1.4rem;
+                // margin-top: -.1rem;
+                content: "";
+                color: #fff;
+                background: url('../../assets/img/radio.png');
+                background-size: 100%;
+                outline: none;
+            }
+            &:checked {
+                &:before {
+                    // content: "✔";
+                    background: url('../../assets/img/radio_next.png');
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+    .statement {
+        text-align: center;
+        font-size: 1.2rem;
+        position: absolute;
+        bottom: .9rem;
+        margin: 0px -2rem;
+        width: 100%;
+        color: rgb(182, 182, 182);
+    }
+}
+
+// 弹框验证码
+.modal-dialog {
+    @include radius(2rem);
+    margin-top: 40% auto;
+}
+
+.code_pic {
+    h3 {
+        margin: 1.25rem auto .9rem auto;
+        font-size: 1.6rem;
+        color: #333;
+        text-align: center;
+        font-weight: 1000;
+    }
+    dl {
+        width: 98%;
+        max-width: 27rem;
+        margin: 0px auto;
+        dt {
+            img {
+                width: 100%;
+                height: 6rem;
+            }
+        }
+        dd {
+            text-align: center;
+            input {
+                width: 100%;
+                display: inline-block;
+                border: 1px solid #ccc;
+                line-height: 4.4rem;
+                margin: 0px -3px;
+                font-size: 3rem;
+                outline: none;
+                text-align: center;
+                &:focus {
+                    outline: none;
+                }
+                // max-width: 5.925rem;
+            }
+            &:after {
+                clear: both;
+            }
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 0px;
+}
+
+.icon_input {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    >img {
+        max-width: 100%;
+    }
+    .form-control {
+        @include shadow(0px 0px 0px 0px #fff);
+        @include radius(.5rem);
+        border: 0px;
+        padding-left: 1.4rem;
+        height: 4.5rem;
+        color: rgb(182, 182, 182);
+        background: rgb(247, 247, 247);
+        font-size: 1.6rem;
+    }
+    .getcodeBtn {
+        @include data-btn( 100%,
+        1.2rem,
+        rgb(0,
+        206,
+        231));
+        max-width: 9rem;
+        height: 3.5rem;
+        margin-left: 1rem;
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../sass/mixins";
+@import "../../sass/mixins/button";
+.count {
+    >img {
+        width: 100%;
+        margin-top: -1px;
+    }
+    text-align: center;
+    .openCaseBtn {
+        margin: 12.5rem auto;
+        @include data-btn(90%, 4.3rem, rgb(0, 206, 231));
+        @include line-gradient(#00cee7, #00aed3, right);
+        @include radius(4.3rem);
+        outline: none;
+        font-size: 1.8rem;
+    }
+}

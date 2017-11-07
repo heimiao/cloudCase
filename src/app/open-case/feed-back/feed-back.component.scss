@@ -1,0 +1,21 @@
+@import "../../../sass/mixins";
+@import "../../../sass/mixins/button";
+.count {
+    text-align: center;
+    textarea {
+        border: 0px;
+        width: 100%;
+        padding: 1.9rem 1.5rem;
+        height: 20rem;
+        color: #999;
+        font-size: 1.7rem;
+    }
+    .feedBackBtn {
+        margin: 6.8rem auto;
+        @include data-btn(90%, 4.3rem, rgb(0, 206, 231));
+        @include line-gradient(#00cee7, #00aed3, right);
+        @include radius(.5rem);
+        outline: none;
+        font-size: 1.8rem;
+    }
+}
